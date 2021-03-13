@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+@keyframes sunset-sky {
+  0% {
+    background: #A4E1FF;
+  }
+  55%{
+    background: #F4C2C2;
+  }
+  87% {
+    background: #483475;
+  }
+  100% {
+    background: #2B2F77;
+  }
+}
+
+.sky {
+  background: #A4E1FF;
+  height: 70%;
+  width: 100vw;
+  margin: none;
+  padding: none;
+  animation-name: sunset-sky;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes sunset-sun {
+  from {
+    top: 20%;
+    left: 45%;
+    background-color: #FCD440;
+    height: 20vh;
+    width: 20vh;
+  }
+  to {
+    top: 100%;
+    left: 55%;
+    background-color: #FE5000;
+    height: 30vh;
+    width: 30vh;
+  }
+}
+
+.sun {
+  height: 20vh;
+  width: 20vh;
+  background-color: #FCD440;
+  border-radius: 100%;
+  position: absolute;
+  overflow: hidden;
+  left: 45%;
+  top: 20%;
+  transform: translate(-50%,-50%);
+  animation-name: sunset-sun;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  z-index: 5;
+}
+
+
+@keyframes stars-appear {
+  0% { opacity: 0.0; }
+  50% { opacity: 0.0; }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+.star-stuff {
+  height: 7px;
+  width: 7px;
+  border-radius: 100%;
+  background: white;
+  opacity: 0.0;
+  position: absolute;
+  z-index: 4;
+  animation-name: stars-appear;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+
+
+.big-pyramid {
+  width: 0;
+  height: 0;
+  border-left: 35vh solid transparent;
+  border-right: 35vh solid transparent;
+  border-bottom: 40vh solid #F5D3A5 /* #edc9af */ ;
+  position: absolute;
+  left: 10%;
+  bottom: 25%;
+  z-index: 20;
+}
+
+.small-pyramid {
+  width: 0;
+  height: 0;
+  border-left: 20vh solid transparent;
+  border-right: 20vh solid transparent;
+  border-bottom: 25vh solid #F5D3A5;
+  position: absolute;
+  right: 23%;
+  bottom: 28%;
+  z-index: 20;
+}
+
+.ground {
+  background: #fcfbdd;
+  height: 30%;
+  position: relative;
+  z-index: 15;
+}
